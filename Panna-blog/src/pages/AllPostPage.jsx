@@ -20,7 +20,7 @@ export default function AllPostPage() {
                 <div className="flex flex-wrap">
                     {posts.map((post) => (
                         <div className="p-2 w-1/4" key={post.$id}>
-                            <Postcard post={post} />
+                            <Postcard {...post} />
                         </div>
                     ))}
                 </div>

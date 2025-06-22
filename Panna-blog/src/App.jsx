@@ -16,7 +16,7 @@ function App() {
     authService.getCurrentUser()
       .then((userData) => {
         if (userData) {
-          dispatch(login(userData));
+          dispatch(login({userData}));
         } else {
           dispatch(logout())
         }
@@ -35,7 +35,7 @@ function App() {
         <Footer/>
       </div>
     </div>
-  ) : (null)
+  ) : null
 }
 
 export default App;
